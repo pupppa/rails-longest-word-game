@@ -1,0 +1,38 @@
+<br>
+<br>
+<center>
+<h4>Welcome to the longest word-game!</h4>
+<br>
+<h4><%= @grid.join %>
+<br>
+<h5>"What's your best shot?"</h5>
+<br>
+</form>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+
+
+          <form action="/score" method="post">
+
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+            <%= hidden_field_tag :start_time, Time.now %>
+
+            <%= hidden_field_tag :grid, @grid %>
+
+            <div class="form-group">
+              <input type="text" name="attempt" placeholder="">
+            </div>
+            <input type="submit" value="send!" class="btn btn-primary">
+
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+
+
+</center>

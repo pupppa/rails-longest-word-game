@@ -1,0 +1,27 @@
+<center>
+<br>
+<br>
+<br>
+
+
+
+<p><b>Given letters: </b><%= @grid.join %></p>
+<p><b>Your guess: </b><%= @attempt %></p>
+<p><b>Start time: </b><%= @start_time %></p>
+<p><b>End time: </b><%= @end_time %></p>
+<p><b>Elapsed time: </b><%= @run[:time] %></p>
+<p><b>Translation: </b><%= @run[:translation] %></p>
+<p><b>Message: </b><%= @run[:message] %></p>
+<p><b>Score: </b><%= @run[:score] %></p>
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<%= link_to "Try again!", game_path %>
+</center>
